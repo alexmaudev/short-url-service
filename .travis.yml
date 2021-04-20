@@ -1,0 +1,18 @@
+language: java
+jdk: openjdk11
+
+before_install:
+  - chmod a+x ./mvnw
+
+cache:
+  directories:
+    - $HOME/.m2
+notifications:
+  email:
+    recipients:
+      - alekseimaurindev@gmail.com
+    on_success: always # default: change
+    on_failure: always # default: always
+
+after_success:
+      - bash <(curl -s https://codecov.io/bash)

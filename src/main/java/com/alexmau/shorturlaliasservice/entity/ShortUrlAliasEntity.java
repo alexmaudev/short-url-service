@@ -24,6 +24,7 @@ public class ShortUrlAliasEntity {
     @NaturalId
     private String alias;
 
+    @Column(columnDefinition = "CLOB")
     private String url;
 
     public ShortUrlAliasEntity(String alias, String url) {
